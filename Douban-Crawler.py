@@ -10,11 +10,13 @@ headers = {
 for start_num in range(0, 250, 25):
     try:
         response = requests.get(f"https://movie.douban.com/top250?start={start_num}&filter=", headers=headers)
+        
         response.raise_for_status()  # 确保响应状态是200
-        html = response.text
+        html = response.content.decode("utf-8")
+        
         soup = BeautifulSoup(html, "html.parser")
         
-        all_titles = soup.findAll("span", attrs={"class": "title"})
+        all_titles = soup.find_all("span", attrs={"class": "title"})
         for title in all_titles:
             title_string = title.string
             if "/" not in title_string:  # 排除中英文名称带斜杠的情况
