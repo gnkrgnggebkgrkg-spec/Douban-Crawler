@@ -2,7 +2,7 @@
 
 这是一个使用 Python 编写的爬虫程序，旨在抓取豆瓣网站的 **TOP 250 电影** 列表，并打印出每部电影的中文名称。爬虫程序使用了 `requests` 和 `BeautifulSoup` 库来获取和解析网页内容。该项目适用于学习如何进行网页抓取，尤其是从静态网页中提取信息的基本方法。
 
-## pip完需要的库以后，vscode出现中文乱码输出（output），已处理好
+## pip完需要的库以后，vscode出现中文乱码输出（output），已处理好，参考https://blog.csdn.net/xjxj_/article/details/149809381
 ## 项目链接
 
 [GitHub 仓库](https://github.com/Wade-Lv-12/Douban-Crawler)
